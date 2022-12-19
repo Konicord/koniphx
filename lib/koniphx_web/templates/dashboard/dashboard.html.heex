@@ -1,6 +1,9 @@
 <div class="mx-auto max-w-sm flex flex-col items-center justify-center h-screen">
   <div class="text-center">
-    <!-- @name refers to the controller `name: name` render function -->
-    <h1>Welcome, <%= @name %></h1>
+    <!-- Creating a link on the text, with the path to "page_path"-->
+    <!-- page_path  GET   /  KoniphxWeb.PageController :index-->
+    <h1 class="text-black-500 hover:text-black-700">
+      <%= link "Welcome, #{@name}", to: Routes.page_path(@conn, :index) %>
+    </h1>
   </div>
 </div>
